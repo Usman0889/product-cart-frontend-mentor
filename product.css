@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(https://fonts.google.com/specimen/Montserrat);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  
+  :root {
+    /* Colors */
+  
+    /* Primary */
+  
+    --dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+  
+    /* Neutral */
+  
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+  
+    --Font_size_paragraph: 14px;
+  }
+  
+  body {
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    display: flex;
+    width: 480px;
+    height: 350px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+  }
+  
+  .img-container {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 50%;
+    /* border: 2px solid green; */
+    height: 100%;
+    background-image: url("./image-product-desktop.jpg");
+    background-size: cover;
+  }
+  
+  .content {
+    font-family: Fraunces;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--White);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    /* border : 2px solid green; */
+    height: 100%;
+  }
+  
+  /* .product-img {
+    background-image: url("product-preview-card-component-main/images/image-product-desktop.jpg");
+    background-color: #cccccc;
+  } */
+  
+  .price-sec {
+    color: var(--dark_cyan);
+    display: flex;
+    align-items: center;
+  }
+  
+  .alternate-price {
+    color: var(--Dark_grayish_blue);
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+    font-family: Montserrat;
+  }
+  
+  button {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--White);
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--dark_cyan);
+    /* border: 1px solid black; */
+  }
+  
+  button i {
+    margin-right: 5px;
+  }
+  
+  .description {
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: Montserrat;
+    color: var(--Dark_grayish_blue);
+  }
+  
+  button:hover {
+    background-color: var(--Very_dark_blue);
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  .img {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 376px) {
+    body {
+      border: 2px solid red;
+      display: block;
+    }
+    .card {
+      /* border: 2px solid green; */
+      width: 90%;
+      border-radius: 0px;
+      height: auto;
+      display: block;
+    }
+  
+    .img {
+      display: block;
+      /* border: 2px solid blue; */
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      /* object-fit: contain; */
+    }
+  
+    .img-container {
+      object-fit: contain;
+      border-radius: 0px;
+      width: 100%;
+      background-image: none;
+      /* border: 2px solid yellow; */
+      /* visibility: hidden; */
+    }
+  
+    .content {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+      height: 300px;
+      /* border: 2px solid black; */
+    }
+  }
